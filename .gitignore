@@ -58,6 +58,7 @@ bin/
 obj/
 
 # Visual Studio files
+.vs/
 *.user
 *.suo
 *.vsp
