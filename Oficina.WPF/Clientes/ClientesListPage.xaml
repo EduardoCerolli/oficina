@@ -1,0 +1,32 @@
+﻿<Page x:Class="Oficina.WPF.Clientes.ClientesListPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Clientes">
+
+    <StackPanel Margin="10">
+        <DataGrid ItemsSource="{Binding Clientes}" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nome"  Binding="{Binding Nome}" Width="6*"/>
+                <DataGridTextColumn Header="Número" Binding="{Binding Numero}" Width="2*"/>
+
+                <DataGridTemplateColumn Width="50">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="AbrirCarros_Click"
+                                    ToolTip="Ver detalhes"
+                                    Background="Transparent"
+                                    BorderThickness="0">
+                                <md:PackIcon Kind="AccountEye"/>
+                            </Button>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Button Content="Cadastrar Cliente"
+                Click="NovoCliente_Click"
+                Width="200" Height="25"/>
+    </StackPanel>
+</Page>

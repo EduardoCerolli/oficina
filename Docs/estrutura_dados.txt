@@ -1,0 +1,29 @@
+
+
+Cliente:
+	Nome
+	Numero
+
+	[] Carro :
+		Placa
+		Modelo
+		Ano
+		Cor
+		Motor	
+				[] Serviços:
+					Forma de Pagamento
+					Kilometragem
+					Data Serviço
+					Data Garantia
+					Valor Gasto
+					Valor Cliente
+					Mão de obra
+					TotalPeças
+					Total serviço
+					Descrição
+					[] Peças:
+						Data Compra
+						Valor Pago
+						Valor Cobrado
+						AutoPeças
+						Garantia

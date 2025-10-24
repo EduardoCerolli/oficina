@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="../Oficina.Migrador/Oficina.Migrador.csproj" Id="0b696b09-b523-4419-8613-deb59c416988" />
+  <Project Path="../Oficina.WPF/Oficina.WPF.csproj" Id="3f78add8-997f-4cb5-b8bf-8888a5c5ab50" />
+  <Project Path="Oficina.csproj" />
+</Solution>
