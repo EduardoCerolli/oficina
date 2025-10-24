@@ -52,3 +52,29 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+
+# Build Folders
+bin/
+obj/
+
+# Visual Studio files
+*.user
+*.suo
+*.vsp
+*.cache
+*.pdb
+*.exe
+*.dll
+
+# Rider / VSCode
+.idea/
+.vscode/
+
+# Publish outputs
+*.publish.xml
+*.appx
+*.appxbundle
+
+# NuGet
+*.nupkg
+packages/
