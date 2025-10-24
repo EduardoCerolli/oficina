@@ -10,16 +10,22 @@ namespace Oficina.WPF.Carros
     {
         private readonly IServiceProvider serviceProvider;
         private readonly Cliente cliente;
+        private readonly MainWindow mainWindow;
+        private readonly ClientesListPage clientesListPage;
+
         public ObservableCollection<Carro> Carros { get; } = new();
 
         public CarrosListPage(
             IServiceProvider serviceProvider,
-            Cliente cliente)
+            Cliente cliente,
+            MainWindow mainWindow,
+            ClientesListPage clientesListPage)
         {
             InitializeComponent();
             this.serviceProvider = serviceProvider;
             this.cliente = cliente;
-
+            this.mainWindow = mainWindow;
+            this.clientesListPage = clientesListPage;
             DataContext = this;
             CarregarCarros();
         }
@@ -33,8 +39,7 @@ namespace Oficina.WPF.Carros
 
         private void Voltar_Click(object sender, RoutedEventArgs e)
         {
-            //var mainWindow = (MainWindow)Application.Current.MainWindow;
-            //mainWindow.MainFrame.Navigate(new ClientesListPage(serviceProvider, mainWindow));
+            mainWindow.MainFrame.Navigate(clientesListPage);
         }
     }
 }

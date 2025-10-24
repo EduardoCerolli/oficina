@@ -15,7 +15,10 @@ namespace Oficina.WPF.Clientes
 
         public ObservableCollection<Cliente> Clientes { get; } = new();
 
-        public ClientesListPage(IServiceProvider serviceProvider, IRepository<Cliente> clienteRepository, MainWindow mainWindow)
+        public ClientesListPage(
+            IServiceProvider serviceProvider,
+            IRepository<Cliente> clienteRepository,
+            MainWindow mainWindow)
         {
             InitializeComponent();
             DataContext = this;
@@ -51,7 +54,7 @@ namespace Oficina.WPF.Clientes
         {
             if (sender is Button btn && btn.DataContext is Cliente cliente)
             {
-                mainWindow.MainFrame.Navigate(new CarrosListPage(serviceProvider, cliente));
+                mainWindow.MainFrame.Navigate(new CarrosListPage(serviceProvider, cliente, mainWindow, this));
             }
         }
     }
