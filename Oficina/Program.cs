@@ -48,6 +48,5 @@ class Program
             .Build();
 
         var app = host.Services.GetRequiredService<App>();
-        app.RunAsync();
     }
 }

@@ -1,20 +1,9 @@
-﻿using Oficina.Models;
-using Oficina.Repositories;
-
-namespace Oficina
+﻿namespace Oficina
 {
     public class App
     {
-        private readonly IRepository<Cliente> clienteRepository;
-
-        public App(IRepository<Cliente> clienteRepository)
+        public App()
         {
-            this.clienteRepository = clienteRepository;
-        }
-
-        public void RunAsync()
-        {
-            var clientes = clienteRepository.List(null);
         }
     }
 }
